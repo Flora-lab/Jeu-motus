@@ -32,7 +32,7 @@ Pour faire fonctionner ce projet, vous devez avoir les éléments suivants insta
 1. Clonez ce dépôt ou téléchargez le fichier ZIP et extrayez-le.
 2. Placez les fichiers du projet dans le répertoire du serveur local (`htdocs` pour XAMPP, par exemple).
 3. Créez une base de données MySQL appelée `motus`.
-4. Créez une table `scores` dans la base de données avec la commande suivante :
+4. Créez une table `word` et une table `scores` dans la base de données avec les commandes suivante :
 
 ```sql
 CREATE TABLE word (
