@@ -1,0 +1,354 @@
+body.accueil {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(-45deg, #1f1c2c, #928dab, #2c5364, #0f2027);
+    background-size: 400% 400%;
+    animation: gradient 12s ease infinite;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* La largeur est maintenant de 100% */
+    max-width: 100%; /* Pour éviter tout rétrécissement au-delà de 100% */
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.titre-accueil {
+    font-size: 6vw; /* La taille du texte est proportionnelle à la largeur de l'écran */
+    animation: fadeInDown 2s ease;
+}
+
+.titre-accueil span {
+    color: #ff3366;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+
+.btn-jouer {
+    display: inline-block;
+    padding: 16px 32px;
+    font-size: 1.3rem;
+    background: #ff3366;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-top: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: bounceIn 1.5s ease;
+    width: auto;
+    min-width: 200px;
+}
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+.btn-jouer:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px#ff3366;
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); opacity: 0; }
+    60% { transform: scale(1.1); }
+    80% { transform: scale(0.95); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Animations */
+@keyframes popIn {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+body.jeu {
+    background: radial-gradient(circle at center, #222, #111);
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 30px;
+    text-align: center;
+}
+
+.tentatives {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.form-jeu input {
+    padding: 15px;
+    font-size: 1.3rem;
+    width: 80%;
+    max-width: 400px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #ff3366;
+    background-color: #333;
+    color: white;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.form-jeu button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background: #ff3366;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.grille {
+    margin-top: 30px;
+}
+
+.mot {
+    margin: 10px 0;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+.lettre {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    line-height: 40px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    animation: pop 0.3s ease-in-out forwards;
+    opacity: 0;
+}
+
+
+.lettre.bien-place {
+    background: #00c853;
+}
+
+.lettre.mal-place {
+    background: #ffd600;
+    color: #000;
+}
+
+.lettre.absente {
+    background: #444;
+    color: #999;
+}
+
+.message {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.victoire {
+    background: #2ecc71;
+}
+
+.defaite {
+    background: #e74c3c;
+}
+
+.btn-score {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.mot.masque {
+    font-size: 2rem;
+    letter-spacing: 10px;
+    margin-top: 30px;
+}
+.btn-rejouer {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 28px;
+    font-size: 1.2rem;
+    background: #ff3366;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    animation: fadeIn 0.6s ease;
+}
+
+.btn-rejouer:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #e6083fc2;
+}
+body.score {
+    background: #1e1e1e;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    padding: 30px;
+}
+
+.table-score {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+    background-color: #2c2c2c;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-score th, .table-score td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #444;
+}
+
+.table-score th {
+    background: #444;
+    text-transform: uppercase;
+}
+
+.table-score tr:hover {
+    background: #333;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .logo-accueil {
+        width: 50%; /* Logo plus grand sur les écrans de taille moyenne */
+        max-width: 150px;
+    }
+
+    .titre-accueil {
+        font-size: 8vw; /* Taille plus grande pour les titres */
+    }
+
+    .btn-jouer {
+        font-size: 1.1rem;
+        padding: 14px 28px;
+        min-width: 220px; /* Largeur minimale ajustée */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .logo-accueil {
+        width: 60%; /* Logo encore plus large sur les petits écrans */
+        max-width: 130px;
+    }
+
+    .titre-accueil {
+        font-size: 10vw; /* Taille du texte plus grande */
+    }
+
+    .btn-jouer {
+        font-size: 1rem;
+        padding: 12px 24px;
+        min-width: 240px; /* Largeur minimale ajustée pour un affichage confortable */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .titre-accueil {
+        font-size: 12vw; /* Très grand texte pour les petits écrans */
+    }
+
+    .btn-jouer {
+        font-size: 1rem;
+        padding: 12px 24px;
+        min-width: 250px;
+    }
+}
+.form-score {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #444;
+    border-radius: 12px;
+    display: inline-block;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.form-score label {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    display: block;
+    color: #ccc;
+}
+
+.form-score input {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    width: 250px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    text-align: center;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+.form-score button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    background: #00c853;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form-score button:hover {
+    background: #00e676;
+}
+
